@@ -1,4 +1,8 @@
-fetch("studentDB.json")
+const encodedFileName = "c3R1ZGVudE1lbnRzLmpzb24=";
+
+const decodedFileName = atob(encodedFileName); // Decode the Base64 encoded file name
+
+fetch(decodedFileName)
   .then((response) => response.json())
   .then((studentDB) => {
     // Get form submit event
